@@ -16,6 +16,7 @@ Install a subset with `-s <name>[,<name>…]`. Update with `npx skills update -g
 |---|---|
 | `dream` | Consolidates an agent's long-term memory: replays the journal, promotes durable facts, rewrites notes to the current rules, archives what was removed, then reports. Store-specific details live in an adapter (`references/muninn.md`). |
 | `gcloud-remote-login` | Completes `gcloud auth login` on a machine whose browser the user cannot reach. |
+| `obsidian-markdown-format` | Writes and edits Obsidian-flavored Markdown: wikilinks, embeds, callouts, tables, math and frontmatter. |
 | `taiwanize` | Traditional Chinese (Taiwan) localization and EN↔zh-TW↔JA translation. |
 
 Machine- and vault-specific settings (scope, protected notes, archive paths) belong in the caller's configuration, such as a scheduled job's prompt, not in the skills.
