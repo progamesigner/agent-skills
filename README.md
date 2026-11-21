@@ -14,7 +14,7 @@ Install a subset with `-s <name>[,<name>…]`. Update with `npx skills update -g
 
 | Skill | What it does |
 |---|---|
-| `dream` | Consolidates a Muninn memory vault: replays the diary, promotes durable facts, rewrites notes to the current rules, archives what was removed, then reports. |
+| `dream` | Consolidates an agent's long-term memory: replays the journal, promotes durable facts, rewrites notes to the current rules, archives what was removed, then reports. Store-specific details live in an adapter (`references/muninn.md`). |
 | `gcloud-remote-login` | Completes `gcloud auth login` on a machine whose browser the user cannot reach. |
 | `taiwanize` | Traditional Chinese (Taiwan) localization and EN↔zh-TW↔JA translation. |
 
