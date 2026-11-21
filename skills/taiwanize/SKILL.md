@@ -145,11 +145,11 @@ description: 正體中文（臺灣）在地化與翻譯技能。當專案需要 
 | 文件 | 內容 |
 | --- | --- |
 | [vocabulary](references/vocabulary.md) | 臺灣用語完整對照表（名詞、動詞、句式、標點） |
-| [linguipedia-cross-strait](references/linguipedia-cross-strait.md) | 兩岸差異用詞完整對照（4,800+ 筆，來自中華語文知識庫） |
+| [linguipedia-cross-strait](references/linguipedia-cross-strait.md) | 兩岸差異常見用詞精選（約 50 筆，來自中華語文知識庫；完整資料查原網站） |
 | [chinese-traditional](references/chinese-traditional.md) | 繁體中文語言特性：量詞、成語、臺港澳差異、翻譯策略 |
 | [english](references/english.md) | 英文語言特性：句式、正式度、慣用語、翻譯策略 |
 | [japanese](references/japanese.md) | 日文語言特性：敬語五階、語尾、助詞、翻譯策略 |
 | [translation-challenges](references/translation-challenges.md) | 常見翻譯挑戰的詳細範例與解法 |
 | [resources](references/resources.md) | 辭典、語料庫、文法參考、驗證工具彙整 |
 
-> **注意：** `linguipedia-cross-strait.md` 檔案較大（~4,800 筆），不建議全文載入上下文。遇到不確定的兩岸用詞差異時，可用 Grep 工具搜尋該檔案中的特定詞彙。
+> **注意：** `linguipedia-cross-strait.md` 只收約 50 筆常見差異。表裡沒有的詞，到[中華語文知識庫](https://www.chinese-linguipedia.org/search_difference.html)查。
