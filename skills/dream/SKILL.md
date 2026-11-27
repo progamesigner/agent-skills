@@ -34,7 +34,7 @@ The procedure works on these roles; the adapter says where each one lives and wh
 | owner | how the memory's owner is named in notes and the report | the user |
 | entrypoints | notes an agent reads first; reorganized first | the adapter's root index notes |
 | evidence | facts collected before the run (repo heads, deployed images); they outrank notes for what they cover, and nothing beyond them is inferred | none |
-| transcripts | where the period's session records are, reduced to the owner's own messages | none: replay the journal only |
+| transcripts | the owner's own messages from the period, each pointing to its place in the full session record | none: replay the journal only |
 | protected notes | notes that jobs or skills read by path; they keep their path, title and heading structure | none |
 | archive location | where removed text goes | the adapter's default |
 | report | optional note for the full report | none: the journal entry is the report |
@@ -56,7 +56,7 @@ Find the latest dream entry in the journal (the adapter gives its title and any 
 
 ## Step 1: Replay
 
-Read every journal entry in the period. Skip entries written by scheduled jobs, earlier dreams included. When the profile gives transcripts, read the owner's messages from the period's sessions too. They catch what the journal missed (a correction nobody wrote down) and show where a journal entry or note misreports what the owner said. Extract, most valuable first:
+Read every journal entry in the period. Skip entries written by scheduled jobs, earlier dreams included. When the profile gives transcripts, read the owner's messages from the period's sessions too. They catch what the journal missed (a correction nobody wrote down) and show where a journal entry or note misreports what the owner said. When a message needs context (what it corrects, which option it picks, why), open the full record at its pointer and read around it, not the whole session. Extract, most valuable first:
 
 1. **Owner corrections:** the owner said an answer, conclusion or approach was wrong, or overrode a default.
 2. **Repeats:** the same gotcha hit twice, the same fact looked up again.
