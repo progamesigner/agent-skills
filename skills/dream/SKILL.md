@@ -21,6 +21,7 @@ The procedure works on these roles; the adapter says where each one lives and wh
 | indexes | the notes an agent reads to find everything else |
 | core files | identity, rules and working memory; changed only by proposal |
 | archive | removed text, kept verbatim as history |
+| transcripts | what the owner actually said in each session; read only |
 
 ## Inputs
 
@@ -33,6 +34,7 @@ The procedure works on these roles; the adapter says where each one lives and wh
 | owner | how the memory's owner is named in notes and the report | the user |
 | entrypoints | notes an agent reads first; reorganized first | the adapter's root index notes |
 | evidence | facts collected before the run (repo heads, deployed images); they outrank notes for what they cover, and nothing beyond them is inferred | none |
+| transcripts | where the period's session records are, reduced to the owner's own messages | none: replay the journal only |
 | protected notes | notes that jobs or skills read by path; they keep their path, title and heading structure | none |
 | archive location | where removed text goes | the adapter's default |
 | report | optional note for the full report | none: the journal entry is the report |
@@ -54,7 +56,7 @@ Find the latest dream entry in the journal (the adapter gives its title and any 
 
 ## Step 1: Replay
 
-Read every journal entry in the period. Skip entries written by scheduled jobs, earlier dreams included. Extract, most valuable first:
+Read every journal entry in the period. Skip entries written by scheduled jobs, earlier dreams included. When the profile gives transcripts, read the owner's messages from the period's sessions too. They catch what the journal missed (a correction nobody wrote down) and show where a journal entry or note misreports what the owner said. Extract, most valuable first:
 
 1. **Owner corrections:** the owner said an answer, conclusion or approach was wrong, or overrode a default.
 2. **Repeats:** the same gotcha hit twice, the same fact looked up again.
@@ -87,7 +89,7 @@ For each extracted item:
 
 **Guard rails.**
 
-- Truth comes only from the memory and the profile's evidence. Do not correct facts from your own knowledge, do not call external systems, and do not record an inference the owner has not confirmed.
+- Truth comes only from the memory, the profile's evidence and its transcripts. For what the owner said or decided, transcripts outrank the journal and notes; for system state, evidence outranks all three. Do not correct facts from your own knowledge, do not call external systems, and do not record an inference the owner has not confirmed.
 - Stale-looking text that nothing overrides ("pending", "not yet sent", a planned date now past) stays as written and goes to *Needs owner*. When "pending", "in progress" or "in review" has had no follow-up for more than 14 days, also add a dated line at the top of that note marking it a stale snapshot with no recorded follow-up, and say that this is the agent's judgement, not the owner cancelling it.
 - Two notes disagree and nothing decides which wins: change neither; list both and the conflicting lines.
 - Never drop an owner-confirmed decision, a "do not re-propose" instruction, an ID or a tool gotcha because it looks minor. When unsure whether text is superseded, keep it.
@@ -100,7 +102,7 @@ For each extracted item:
 - Skills, including this one: propose the edit; the owner changes the skill's source.
 - Deleting or renaming a note.
 
-**Never:** persist, copy or move sensitive personal information (performance, compensation, health) about colleagues or candidates; flag where it sits instead. Never touch notes outside the agent's area of the store (the owner's own notes may share it), whatever the profile says.
+**Never:** copy a secret (token, password, key) from a transcript into memory, or quote more of a transcript than a note needs. Never persist, copy or move sensitive personal information (performance, compensation, health) about colleagues or candidates; flag where it sits instead. Never touch notes outside the agent's area of the store (the owner's own notes may share it), whatever the profile says.
 
 ## Step 4: Report
 
